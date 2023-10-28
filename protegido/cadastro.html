@@ -3,56 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Cadastro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" type="text/css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../publico/css/estilo.css">
 </head>
-<body>
-    <h1>Cadastro</h1>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    
-    <form class="row g-3">
-        <div class="col-md-6">
-          <label for="inputEmail4" class="form-label">Email</label>
-          <input type="email" class="form-control" id="inputEmail4">
+<body>   
+
+  <div class="container-fluid">
+
+    <header class="header header-responsive">
+        <div class="barra">
+            <p>Sistema de Cadastro Profissional - CRF-PR</p>
         </div>
-        <div class="col-md-6">
-          <label for="inputPassword4" class="form-label">Password</label>
-          <input type="password" class="form-control" id="inputPassword4">
+    </header>
+
+    <article class="article">
+      <form class="needs-validation row g-3">
+        <div class="form-group col-md-10">
+          <label for="nome">Nome:</label>
+          <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite o nome" required>
         </div>
-        <div class="col-12">
-          <label for="inputAddress" class="form-label">Address</label>
-          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+        <div class="form-group col-md-2">
+          <label for="data-nascimento">Data de Nascimento:</label>
+          <input type="date" class="form-control" id="data-nascimento" required>
         </div>
-        <div class="col-12">
-          <label for="inputAddress2" class="form-label">Address 2</label>
-          <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+        <div class="form-group col-md-2">
+          <label for="cpf">CPF:</label>
+          <input type="text" class="form-control" id="cpf" name="cpf" placeholder="000.000.000-00" required>
         </div>
-        <div class="col-md-6">
-          <label for="inputCity" class="form-label">City</label>
-          <input type="text" class="form-control" id="inputCity">
+        <div class="form-group col-md-5">
+          <label for="email">E-mail:</label>
+          <input type="email" class="form-control" id="email" name="email" placeholder="Digite o email" required>          
         </div>
-        <div class="col-md-4">
-          <label for="inputState" class="form-label">State</label>
-          <select id="inputState" class="form-select">
-            <option selected>Choose...</option>
-            <option>...</option>
-          </select>
+        <div class="form-group col-md-5">
+          <label for="telefone">Telefone:</label>
+          <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="(00)0000-0000" required>          
+        </div></br>
+        <div class="form-group col-md-2">
+          <label for="cep">CEP:</label>
+          <input type="text" class="form-control" id="CEP" name="cep" placeholder="00.000-000" required>
         </div>
-        <div class="col-md-2">
-          <label for="inputZip" class="form-label">Zip</label>
-          <input type="text" class="form-control" id="inputZip">
+        <div class="form-group col-md-4">
+          <label for="endereco">Endereço:</label>
+          <input type="text" class="form-control" id="endereco" name="endereco" placeholder="Rua / Avenida" required>          
         </div>
-        <div class="col-12">
+        <div class="form-group col-md-2">
+          <label for="numeroEndereco">Nº / Comp.</label>
+          <input type="text" class="form-control" id="numeroEndereco" name="numeroEndereco" placeholder="S/N">          
+        </div>        
+        <div class="form-group col-md-2">
+          <label for="bairroEndereco">Bairro</label>
+          <input type="text" class="form-control" id="bairroEndereco" name="bairroEndereco" placeholder="Digite o bairro" required>          
+        </div>
+        <div class="form-group col-md-2">
+          <label for="cidadeEndereco">Cidade</label>
+          <input type="text" class="form-control" id="cidadeEndereco" name="cidadeEndereco" placeholder="Digite a Cidade" required>          
+        </div>        
+      </br>
+        <div class="form-group">
+          <label for="sexo">Sexo:</label>
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="gridCheck">
-            <label class="form-check-label" for="gridCheck">
-              Check me out
+            <input class="form-check-input" type="radio" name="sexo" id="sexo-masculino" value="masculino" required>
+            <label class="form-check-label" for="sexo-masculino">
+              Masculino
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="sexo" id="sexo-feminino" value="feminino" required>
+            <label class="form-check-label" for="sexo-feminino">
+              Feminino
             </label>
           </div>
         </div>
-        <div class="col-12">
-          <button type="submit" class="btn btn-primary">Sign in</button>
+        <div class="form-group col-md-7">
+          <label for="curso">Curso:</label>
+          <select class="form-control" id="curso" required aria-label="select example">
+              <option value="">Selecione o curso</option>
+              <option value="farmacêuticoGeneralista">Farmacêutico Generalista</option>
+              <option value="farmacêutico">Farmacêutico</option>
+              <option value="farmacêuticoIndustrial">Farmacêutico Industrial</option>
+              <option value="farmacêuticoBioquímico">Farmacêutico Bioquímico</option>
+              <option value="técnicoDeAnálisesQuímicas">Técnico de Análises Químicas</option>
+          </select>
         </div>
+        <div class= "col-md-7 mb-3">
+          <label for="observacoes" class="form-label">Observações:</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Outras observações se necessário"></textarea>
+        </div>
+        <div class="col-md-7 mb-3">
+          <label for="anexo" class="form-label">Documentos</label>
+          <input class="form-control" type="file" id="formFileMultiple" multiple placeholder="Anexe todos os documentos necessários" required>
+        </div>
+        </br>
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" required>
+          <label class="form-check-label" for="flexSwitchCheckChecked">Estou ciente de todos os termos para finalizar o cadastro.</label>
+        </div>
+        </br>
+        <button type="submit" class="btn btn-primary col-md-4">Salvar cadastro profissional</button>    
       </form>
+    </article>   
+    
+  </div>
+
 </body>
 </html>
