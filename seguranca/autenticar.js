@@ -1,5 +1,5 @@
 export default function autenticar(requisicao, resposta, next) {
-    const email = 'thalles@felipe';
+    const email = 'usuario@email';
     const senha = 'abcde';
 
     const emailInformado = requisicao.body.email;
@@ -13,8 +13,6 @@ export default function autenticar(requisicao, resposta, next) {
         requisicao.session.autenticado = false;
         resposta.redirect('/login.html');
     }
-
-
 }
 
 export function verificaAutenticacao(requisicao, resposta, next) {
